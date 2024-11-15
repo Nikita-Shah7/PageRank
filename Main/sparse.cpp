@@ -99,6 +99,14 @@ sparse::~sparse()
     // Cleanup code would go here
 }
 
+
+// tol: Tolerance level for the convergence criterion (default: 1e-8): This value determines the threshold for how close successive iterations need to be to consider the algorithm converged.
+// maxiters: Maximum number of iterations allowed for the power iteration.
+// m: Damping factor, typically around 0.15. It represents the probability of randomly jumping to another page, ensuring convergence and accounting for nodes with no outgoing links.
+
+// n: Total number of vertices in the graph.
+// y: An array to store intermediate PageRank values.
+// E: Tracks the error between the current and previous iterations.
 int sparse::google_power(double tol = 0.00000001, int maxiters = 10000, double m = 0.15)
 {
     int n = num_vertices;
@@ -159,6 +167,8 @@ int sparse::google_power(double tol = 0.00000001, int maxiters = 10000, double m
     return (k + 1);
 }
 
+
+// topdiff and botdiff: Track differences between successive iterations for calculating the convergence rate.
 double sparse::powerConRate(int iters, double m = 0.15)
 {
     int n = num_vertices;
@@ -205,13 +215,14 @@ double sparse::powerConRate(int iters, double m = 0.15)
             botdiff += abs(x[j] - z[j]);
         }
         conRate = topdiff / botdiff;
-        file << conRate << endl;
+        // file << conRate << endl;
 
         // copy y into z
         for (int j = 0; j < n; j++)
             z[j] = y[j];
     }
-    file << endl;
+    file << conRate << endl;
+    // file << endl;
     file.close();
 
     ofstream file2;
