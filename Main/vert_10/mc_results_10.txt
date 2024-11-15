@@ -1,0 +1,12 @@
+Average Error for Method 1: 0.55849
+Average Time for Method 1: 0.000409025
+
+Average Error for Method 2: 0.496684
+Average Time for Method 2: 0.00044905
+
+Average Error for Method 3: 0.121583
+Average Time for Method 3: 0.00068565
+
+Average Error for Method 4: 0.141294
+Average Time for Method 4: 0.000432475
+
