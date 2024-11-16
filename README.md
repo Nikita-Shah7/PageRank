@@ -4,7 +4,7 @@ PageRank is a link analysis algorithm developed by Larry Page and Sergey Brin, o
 
 ## Folder Structure
 ```bash
-D:.
+PageRank
 │   README.md
 │
 ├───Main
@@ -35,14 +35,18 @@ D:.
 
 
 ### Generate Graphs:
-```bash 
+```bash
+cd ./Main
+
 g++ .\generates_graphs.cpp .\graph.cpp .\llist.cpp .\sparse.cpp -o .\generates_graphs.exe
 
 .\generates_graphs.exe <no. of nodes>
 ```
 
 ### Calculate PageRank vector by Power Iteration:
-```bash 
+```bash
+cd ./Main
+
 g++ .\power_iteration.cpp .\sparse.cpp -o .\power_iteration.exe
 
 .\power_iteration.exe <no. of nodes>
@@ -50,7 +54,9 @@ g++ .\power_iteration.cpp .\sparse.cpp -o .\power_iteration.exe
 
 
 ### Calculate PageRank vector by Monte Carlo Methods:
-```bash 
+```bash
+cd ./Main
+
 g++ .\montecarlo_test.cpp .\sparse.cpp -o .\montecarlo_test.exe
 
 .\montecarlo_test.exe <no. of nodes> <random walk per node>
@@ -62,7 +68,6 @@ g++ .\montecarlo_test.cpp .\sparse.cpp -o .\montecarlo_test.exe
 | **Dataset** | [Click here](https://drive.google.com/drive/folders/1wzwV_AVbduzWa8N5qRnCJyumX8gwsKY9?usp=drive_link) |
 | **Power Iteration Outputs** | [Click here](https://drive.google.com/drive/folders/1bui_H6fGOY8TpL8bSbjGVe2pufgpZBLV?usp=drive_link) |
 | **Monte Carlo Outputs** | [Click here](https://drive.google.com/drive/folders/1laWINziI8jinnYHmJds078mIEbdygDgk?usp=drive_link) |
-| | |
 
 
 
